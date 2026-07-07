@@ -1,1 +1,346 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+
+<title>Quetzalito Flix – Películas, Series y Anime en Vivo</title>
+<meta name="description" content="Descarga Quetzalito Flix gratis para Android. Miles de películas, series y anime, subtitulado y doblado, sin suscripciones ni pagos ocultos.">
+<meta name="keywords" content="películas gratis, series online, anime gratis, Quetzalito Flix, app de películas Android, ver anime gratis, streaming gratis">
+<meta name="author" content="Dorian DHApps">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quetzalito-flix.vercel.app">
+<meta property="og:title" content="Quetzalito Flix – Películas, Series y Anime en Vivo">
+<meta property="og:description" content="Descarga gratis la app para Android. Miles de películas, series y anime, subtitulado y doblado, todo sin pagar nada.">
+<meta property="og:image" content="https://i.postimg.cc/C5N42pQW/20241125-051312.jpg">
+<meta property="og:site_name" content="Quetzalito Flix">
+<meta property="og:locale" content="es_GT">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quetzalito Flix – Películas, Series y Anime en Vivo">
+<meta name="twitter:description" content="Miles de películas, series y anime gratis para Android. Sin suscripciones, sin pagos ocultos.">
+
+<link rel="icon" type="image/png" href="https://i.postimg.cc/sX7PB6tH/IMG-20241125-055550.jpg">
+<link rel="apple-touch-icon" href="https://i.postimg.cc/C5N42pQW/20241125-051312.jpg">
+
+<script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+<script>
+DisableDevtool({
+  ondevtoolopen: function () { window.location.replace("about:blank"); },
+  clearIntervalWhenDevOpen: true,
+  disableRuntimeCheck: false
+});
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --dark:  #05070c;
+  --panel: #0d1620;
+  --panel2:#111f2e;
+  --teal:  #00e5c0;
+  --teal2: #00a88d;
+  --flix:  #ffa726;
+  --white: #f3f8fb;
+  --line:  rgba(255,255,255,.09);
+}
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{ background:var(--dark); color:var(--white); font-family:'Barlow',sans-serif; overflow-x:hidden; }
+::selection{ background:var(--teal); color:var(--dark); }
+.brand-flix{ color:var(--flix); }
+.wrap{ max-width:1180px; margin:0 auto; }
+
+/* ---------- nav ---------- */
+nav{ position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:16px 6vw; background:rgba(5,7,12,.75); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+.nav-logo{ display:flex; align-items:center; gap:10px; font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:2px; color:var(--white); text-decoration:none; }
+.nav-logo img{ width:38px; height:38px; border-radius:9px; object-fit:cover; }
+.nav-links{ display:flex; gap:34px; }
+.nav-links a{ color:rgba(243,248,251,.6); text-decoration:none; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:.92rem; letter-spacing:.5px; transition:color .2s; }
+.nav-links a:hover{ color:var(--teal); }
+.nav-cta{ background:var(--teal); color:var(--dark); font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:.85rem; letter-spacing:1px; padding:9px 22px; border-radius:8px; text-decoration:none; transition:background .2s, transform .2s; }
+.nav-cta:hover{ background:var(--teal2); transform:translateY(-2px); }
+@media (max-width:860px){ .nav-links{ display:none; } }
+
+/* ---------- hero: split diagonal ---------- */
+#hero{ position:relative; padding-top:88px; min-height:92vh; display:grid; grid-template-columns:1.05fr .95fr; align-items:stretch; }
+.hero-left{ display:flex; flex-direction:column; justify-content:center; padding:60px 5vw 60px 6vw; position:relative; z-index:2; }
+.eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:.78rem; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:22px; }
+.eyebrow::before{ content:''; width:26px; height:2px; background:var(--teal); }
+h1{ font-family:'Bebas Neue',sans-serif; font-size:clamp(3.2rem,7vw,5.6rem); line-height:.92; letter-spacing:.5px; }
+h1 span{ display:block; }
+h1 .l2{ color:var(--teal); }
+.hero-sub{ margin-top:24px; max-width:440px; font-size:1.02rem; line-height:1.75; color:rgba(243,248,251,.62); }
+.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top:34px; }
+.btn{ display:inline-flex; align-items:center; gap:10px; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:1rem; letter-spacing:.5px; padding:14px 28px; border-radius:9px; text-decoration:none; transition:transform .2s, box-shadow .2s, background .2s; }
+.btn-solid{ background:var(--teal); color:var(--dark); box-shadow:0 10px 30px rgba(0,201,167,.28); }
+.btn-solid:hover{ transform:translateY(-3px); box-shadow:0 16px 38px rgba(0,201,167,.42); }
+.btn-outline{ border:1.5px solid rgba(243,248,251,.24); color:var(--white); }
+.btn-outline:hover{ border-color:var(--teal); color:var(--teal); }
+.hero-stats{ display:flex; gap:0; margin-top:46px; border-top:1px solid var(--line); padding-top:22px; max-width:440px; }
+.hero-stats .stat{ flex:1; padding-right:18px; }
+.hero-stats strong{ display:block; font-family:'Bebas Neue',sans-serif; font-size:1.7rem; color:var(--white); }
+.hero-stats span{ font-size:.7rem; color:rgba(243,248,251,.4); text-transform:uppercase; letter-spacing:1px; }
+
+.hero-right{ position:relative; overflow:hidden; background:linear-gradient(155deg, var(--panel2), var(--panel) 60%); clip-path:polygon(14% 0, 100% 0, 100% 100%, 0% 100%); }
+.hero-right::before{ content:''; position:absolute; inset:0; background:radial-gradient(circle at 70% 20%, rgba(0,201,167,.16), transparent 60%); }
+.collage{ position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.collage img{ position:absolute; width:150px; border-radius:14px; object-fit:cover; height:300px; box-shadow:0 25px 60px rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.12); }
+.collage img:nth-child(1){ transform:rotate(-9deg) translate(-95px,-10px); z-index:1; }
+.collage img:nth-child(2){ transform:rotate(-2deg) translate(20px,-60px); z-index:3; }
+.collage img:nth-child(3){ transform:rotate(4deg) translate(105px,20px); z-index:2; }
+.collage img:nth-child(4){ transform:rotate(-4deg) translate(10px,70px); z-index:4; }
+@media (max-width:1050px){
+  #hero{ grid-template-columns:1fr; min-height:auto; }
+  .hero-right{ clip-path:none; height:380px; order:-1; }
+  .hero-left{ padding:44px 6vw 50px; text-align:center; }
+  .eyebrow{ margin-left:auto; margin-right:auto; }
+  .hero-sub{ margin-left:auto; margin-right:auto; }
+  .hero-actions{ justify-content:center; }
+  .hero-stats{ margin-left:auto; margin-right:auto; }
+  .collage img{ width:120px; height:230px; }
+  .collage img:nth-child(1){ transform:rotate(-9deg) translate(-70px,0); }
+  .collage img:nth-child(3){ transform:rotate(4deg) translate(75px,10px); }
+}
+
+/* ---------- genre rail ---------- */
+#genres{ padding:54px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--panel); }
+.rail-head{ display:flex; align-items:baseline; justify-content:space-between; padding:0 6vw; margin-bottom:22px; }
+.rail-head h2{ font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:1px; }
+.rail-head span{ font-size:.78rem; color:rgba(243,248,251,.4); }
+.rail{ display:flex; gap:12px; overflow-x:auto; padding:0 6vw 6px; scrollbar-width:none; }
+.rail::-webkit-scrollbar{ display:none; }
+.rail .chip{ flex:0 0 auto; display:flex; align-items:center; gap:9px; padding:11px 20px; border-radius:30px; background:rgba(255,255,255,.04); border:1px solid var(--line); font-weight:700; font-size:.9rem; white-space:nowrap; transition:border-color .2s, background .2s; }
+.rail .chip:hover{ border-color:var(--teal); background:rgba(0,201,167,.08); }
+
+/* ---------- features: editorial list ---------- */
+#features{ padding:110px 6vw; }
+.feat-head{ max-width:560px; margin-bottom:64px; }
+.feat-head p.tag{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:.78rem; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:14px; }
+.feat-head h2{ font-family:'Bebas Neue',sans-serif; font-size:clamp(2.1rem,4.2vw,3.2rem); line-height:1.05; }
+.feat-list{ border-top:1px solid var(--line); }
+.feat-row{ display:grid; grid-template-columns:60px 1fr; gap:26px; padding:30px 0; border-bottom:1px solid var(--line); align-items:start; transition:padding-left .25s; }
+.feat-row:hover{ padding-left:10px; }
+.feat-row .ico{ font-size:1.8rem; }
+.feat-row h3{ font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:900; letter-spacing:.5px; margin-bottom:6px; }
+.feat-row p{ color:rgba(243,248,251,.55); line-height:1.65; max-width:560px; font-size:.94rem; }
+
+/* ---------- social ---------- */
+#social{ padding:70px 6vw; text-align:center; border-top:1px solid var(--line); }
+#social p.tag{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:.78rem; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:26px; }
+.social-icons{ display:flex; justify-content:center; gap:16px; }
+.social-icons a{ width:50px; height:50px; border-radius:50%; display:grid; place-items:center; border:1px solid var(--line); color:rgba(243,248,251,.6); transition:all .2s; }
+.social-icons a:hover{ border-color:var(--teal); color:var(--teal); transform:translateY(-3px); }
+.social-icons svg{ width:20px; height:20px; }
+
+/* ---------- download: diagonal band ---------- */
+#download{ position:relative; padding:120px 6vw; overflow:hidden; background:var(--panel); }
+#download::before{ content:''; position:absolute; inset:0; background:linear-gradient(100deg, var(--panel) 45%, var(--teal) 45.3%, var(--teal2) 100%); clip-path:polygon(0 0, 100% 0, 100% 100%, 30% 100%); opacity:.14; }
+.dl-inner{ position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:40px; max-width:1100px; margin:0 auto; }
+.dl-copy{ max-width:520px; }
+.dl-copy p.tag{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:.78rem; letter-spacing:3px; text-transform:uppercase; color:var(--flix); margin-bottom:14px; }
+.dl-copy h2{ font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem,5vw,3.6rem); line-height:1; margin-bottom:16px; }
+.dl-copy h2 span{ color:var(--teal); }
+.dl-copy p.desc{ color:rgba(243,248,251,.6); line-height:1.7; margin-bottom:22px; }
+.version-tag{ display:inline-block; margin-bottom:22px; background:rgba(0,201,167,.1); border:1px solid rgba(0,201,167,.3); border-radius:20px; padding:4px 16px; font-size:.73rem; font-weight:700; color:var(--teal); letter-spacing:1px; }
+.apk-note{ font-size:.77rem; color:rgba(243,248,251,.35); margin-top:14px; }
+.dl-card{ flex-shrink:0; width:230px; background:var(--dark); border:1px solid var(--line); border-radius:18px; padding:26px 20px; text-align:center; box-shadow:0 30px 70px rgba(0,0,0,.4); }
+.dl-card img{ width:64px; height:64px; border-radius:16px; object-fit:cover; margin-bottom:14px; }
+.dl-card .stars{ color:var(--flix); font-size:.85rem; letter-spacing:2px; margin-bottom:4px; }
+.dl-card .sub{ font-size:.72rem; color:rgba(243,248,251,.4); margin-bottom:16px; }
+
+/* ---------- footer ---------- */
+footer{ padding:34px 6vw; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; border-top:1px solid var(--line); }
+.footer-logo{ display:flex; align-items:center; gap:10px; font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:1px; }
+.footer-logo img{ width:26px; height:26px; border-radius:6px; object-fit:cover; }
+footer .foot-right{ display:flex; align-items:center; gap:18px; font-size:.78rem; color:rgba(243,248,251,.35); }
+footer .foot-right a{ color:inherit; text-decoration:none; }
+footer .foot-right a:hover{ color:var(--teal); }
+
+.fade-in-section{ opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.fade-in-section.visible{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="https://i.postimg.cc/sX7PB6tH/IMG-20241125-055550.jpg" alt="Quetzalito Flix">
+    QUETZALITO <span class="brand-flix">FLIX</span>
+  </a>
+  <div class="nav-links">
+    <a href="#features">Funciones</a>
+    <a href="#genres">Géneros</a>
+    <a href="#download">Descargar</a>
+  </div>
+  <a href="https://quetzalito-flix.vercel.app/QuetzalitoFlix%20Beta%20V1.apk" class="nav-cta">Descargar</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Disponible para Android</div>
+    <h1>
+      <span>TU CINE,</span>
+      <span class="l2">SIN PAUSAS</span>
+    </h1>
+    <p class="hero-sub">Miles de películas, series y anime en un solo lugar. Estrenos constantes, audio y subtítulos en español — todo gratis, directo desde tu celular.</p>
+    <div class="hero-actions">
+      <a href="https://quetzalito-flix.vercel.app/QuetzalitoFlix%20Beta%20V1.apk" class="btn btn-solid">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar APK
+      </a>
+      <a href="#genres" class="btn btn-outline">Ver catálogo →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>100%</strong><span>Gratis</span></div>
+      <div class="stat"><strong>HD</strong><span>Calidad</span></div>
+      <div class="stat"><strong>24/7</strong><span>Estrenos</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="collage">
+      <img src="https://i.postimg.cc/rwkMXLp8/Screenshot-20260707-140622.png" alt="Pantalla 1">
+      <img src="https://i.postimg.cc/qvkSxBqH/Screenshot-20260707-140717.png" alt="Pantalla 2">
+      <img src="https://i.postimg.cc/rmdvRhpY/Screenshot-20260707-140640.png" alt="Pantalla 3">
+      <img src="https://i.postimg.cc/Lsm9fMdb/Screenshot-20260707-141759.png" alt="Pantalla 4">
+    </div>
+  </div>
+</section>
+
+<section id="genres" class="fade-in-section">
+  <div class="rail-head">
+    <h2>Explora por género</h2>
+    <span>Desliza para ver más →</span>
+  </div>
+  <div class="rail">
+    <div class="chip">🎬 Estrenos</div>
+    <div class="chip">💥 Acción</div>
+    <div class="chip">😂 Comedia</div>
+    <div class="chip">👻 Terror</div>
+    <div class="chip">❤️ Romance</div>
+    <div class="chip">🐉 Anime</div>
+    <div class="chip">🕵️ Suspenso</div>
+    <div class="chip">📺 Series</div>
+    <div class="chip">🎭 Drama</div>
+    <div class="chip">🧒 Infantil</div>
+  </div>
+</section>
+
+<section id="features" class="fade-in-section">
+  <div class="feat-head">
+    <p class="tag">¿Por qué elegirla?</p>
+    <h2>Todo lo que necesitas ver, en un solo lugar.</h2>
+  </div>
+  <div class="feat-list">
+    <div class="feat-row"><div class="ico">🎬</div><div><h3>Catálogo Gigante</h3><p>Miles de películas, series y anime, actualizados cada semana con los últimos estrenos.</p></div></div>
+    <div class="feat-row"><div class="ico">💬</div><div><h3>Sub y Doblaje</h3><p>Contenido en español latino y subtitulado. Tú eliges cómo prefieres verlo.</p></div></div>
+    <div class="feat-row"><div class="ico">⚡</div><div><h3>Reproducción Instantánea</h3><p>Sin esperas ni buffering eterno. Presiona play y empieza a disfrutar al instante.</p></div></div>
+
+    <div class="feat-row"><div class="ico">🐉</div><div><h3>Anime Completo</h3><p>Las mejores series de anime, temporada tras temporada, sin cortes.</p></div></div>
+    <div class="feat-row"><div class="ico">🆓</div><div><h3>100% Gratis</h3><p>Sin suscripciones, sin tarjetas, sin pagos ocultos. Solo descarga y disfruta.</p></div></div>
+  </div>
+</section>
+
+<section id="social" class="fade-in-section">
+  <p class="tag">Síguenos</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/ElPirataDHA" aria-label="Facebook" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/quetzalito_tv?igsh=MWYwenFrMDdzeTJncg==" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@quetzalito_tv?_r=1&_t=ZS-96nZh9Nuqxc" aria-label="TikTok" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.93a8.18 8.18 0 004.78 1.52V7a4.85 4.85 0 01-1.01-.31z"/></svg>
+    </a>
+  </div>
+</section>
+
+<section id="download" class="fade-in-section">
+  <div class="dl-inner">
+    <div class="dl-copy">
+      <p class="tag">Tu entrada está lista</p>
+      <h2>DESCARGA <span>GRATIS</span></h2>
+      <p class="desc">Disponible para todos los dispositivos Android. Instálala en segundos y empieza tu maratón de películas, series y anime ahora mismo.</p>
+      <div class="version-tag">Versión 1.0 · Android 5.0+</div>
+      <p class="apk-note">Permite instalar desde fuentes desconocidas en Ajustes → Seguridad</p>
+    </div>
+    <div class="dl-card">
+      <img src="https://i.postimg.cc/sX7PB6tH/IMG-20241125-055550.jpg" alt="Quetzalito Flix">
+      <div class="stars">★★★★★</div>
+      <div class="sub">100% Gratis · Sin anuncios molestos</div>
+      <a href="https://quetzalito-flix.vercel.app/QuetzalitoFlix%20Beta%20V1.apk" class="btn btn-solid" style="width:100%; justify-content:center;">⬇ Descargar APK</a>
+    </div>
+  </div>
+</section>
+<div class="sharethis-inline-share-buttons"></div>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=650476d13b8450001ac45ec7&product=inline-share-buttons&source=platform" async="async"></script><!-- ShareThis END -->
+
+  <script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.feat-card').forEach((c, i) => {
+  c.style.transitionDelay = `${i * 0.07}s`;
+});
+
+(function() {
+  const KEY = 'qs_share_count';
+  let count = parseInt(localStorage.getItem(KEY) || '0', 10);
+  function updateDisplay() {
+    const el = document.getElementById('share-num');
+    if (el) el.textContent = count >= 1000 ? (count / 1000).toFixed(1) + 'k' : count;
+  }
+  updateDisplay();
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'sharethis:share') {
+      count++;
+      localStorage.setItem(KEY, count);
+      updateDisplay();
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const interval = setInterval(function() {
+      if (window.__sharethis__ && window.__sharethis__.initialized) {
+        clearInterval(interval);
+        const orig = window.__sharethis__.onShare || function(){};
+        window.__sharethis__.onShare = function(data) {
+          orig(data);
+          count++;
+          localStorage.setItem(KEY, count);
+          updateDisplay();
+        };
+      }
+    }, 500);
+  });
+})();
+  </script>
+
+<footer>
+  <div class="footer-logo">
+    <img src="https://i.postimg.cc/xdWSBrTP/ic-launchers.png" alt="Quetzalito Flix">
+    QUETZALITO <span class="brand-flix">FLIX</span>
+  </div>
+  <div class="foot-right">
+    <span>© 2026 Quetzalito Flix</span>
+    <a href="#" title="DH Apps">By Dorian DHApps</a>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
