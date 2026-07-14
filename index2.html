@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mundial OP2</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #000;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    video {
+      width: 100%;
+      max-width: 960px;
+      margin: 20px auto;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mundial OP2</h2>
+  <video id="player" controls autoplay muted></video>
+
+  <script>
+    const video = document.getElementById('player');
+    // El cliente solo conoce el ID del canal. Nunca ve tv.m3uts.xyz ni headers.
+    const streamUrl = "https://TU-PROYECTO.vercel.app/api/live/905";
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(streamUrl);
+      hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = streamUrl;
+    }
+  </script>
+
+</body>
+</html>

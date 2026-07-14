@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/live/[id].js": {
+      "maxDuration": 15
+    },
+    "api/seg.js": {
+      "maxDuration": 15
+    }
+  }
+}
